@@ -3,7 +3,7 @@
 {% block head_title %}
     {% trans "Signup" %}
 {% endblock head_title %}
-{% block content %}
+{% block inner_content %}
     {% element h1 %}
         {% trans "Sign Up" %}
     {% endelement %}
@@ -19,7 +19,7 @@
             {% if redirect_field_value %}
                 <input type="hidden"
                        name="{{ redirect_field_name }}"
-                       value="{{ redirect_field_value }}" />
+                       value="{{ redirect_field_value }}"/>
             {% endif %}
         {% endslot %}
         {% slot actions %}
@@ -29,4 +29,4 @@
         {% endslot %}
     {% endelement %}
     {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-{% endblock content %}
+{% endblock %}
